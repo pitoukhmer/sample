@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Item list &middot; Sample module preview</title>
+<link rel="stylesheet" href="../css/sample.css">
+<style>
+	/* Preview chrome only -- not part of the module. */
+	html, body { margin: 0; padding: 0; background: #fbfbfa; }
+	@media (prefers-color-scheme: dark) {
+		html:not([data-theme="light"]), html:not([data-theme="light"]) body { background: #141413; }
+	}
+	html[data-theme="dark"], html[data-theme="dark"] body { background: #141413; }
+</style>
+</head>
+<body>
+<div class="sample-container">
+
+	<header class="sample-header">
+		<h1 class="sample-header__title">Items</h1>
+	</header>
+
+	
+
+		<div class="sample-data">
+			<table class="sample-data__table">
+				<caption class="sample-data__caption">Item List</caption>
+				<thead class="sample-data__thead">
+					<tr>
+						<th class="sample-data__th" scope="col">Name</th>
+						<th class="sample-data__th" scope="col">Slug</th>
+					</tr>
+				</thead>
+				<tbody class="sample-data__tbody">
+					<!-- Here we loop through the $items array -->
+					
+					<tr class="sample-data__row">
+						<td class="sample-data__td sample-data__name">
+							<span class="sample-data__label">Name</span>
+							Getting Started
+						</td>
+						<td class="sample-data__td sample-data__slug">
+							<span class="sample-data__label">Slug</span>
+							getting-started
+						</td>
+					</tr>
+					
+					<tr class="sample-data__row">
+						<td class="sample-data__td sample-data__name">
+							<span class="sample-data__label">Name</span>
+							Module Development Guide
+						</td>
+						<td class="sample-data__td sample-data__slug">
+							<span class="sample-data__label">Slug</span>
+							module-development-guide
+						</td>
+					</tr>
+					
+					<tr class="sample-data__row">
+						<td class="sample-data__td sample-data__name">
+							<span class="sample-data__label">Name</span>
+							Working With MY_Model
+						</td>
+						<td class="sample-data__td sample-data__slug">
+							<span class="sample-data__label">Slug</span>
+							working-with-my-model
+						</td>
+					</tr>
+					
+					<tr class="sample-data__row">
+						<td class="sample-data__td sample-data__name">
+							<span class="sample-data__label">Name</span>
+							Events, Plugins and Widgets
+						</td>
+						<td class="sample-data__td sample-data__slug">
+							<span class="sample-data__label">Slug</span>
+							events-plugins-and-widgets
+						</td>
+					</tr>
+					
+					<tr class="sample-data__row">
+						<td class="sample-data__td sample-data__name">
+							<span class="sample-data__label">Name</span>
+							Migrating A Legacy Theme To The Current Template Engine
+						</td>
+						<td class="sample-data__td sample-data__slug">
+							<span class="sample-data__label">Slug</span>
+							migrating-a-legacy-theme-to-the-current-template-engine
+						</td>
+					</tr>
+					
+				</tbody>
+			</table>
+		</div>
+
+		<nav class="sample-pagination" aria-label="Items">
+			<span class="current">1</span>
+			<a href="#page-2">2</a>
+			<a href="#page-3">3</a>
+			<a href="#next">Next &rsaquo;</a>
+		</nav>
+
+	
+
+</div>
+
+</body>
+</html>

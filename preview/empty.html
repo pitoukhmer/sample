@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Empty state &middot; Sample module preview</title>
+<link rel="stylesheet" href="../css/sample.css">
+<style>
+	/* Preview chrome only -- not part of the module. */
+	html, body { margin: 0; padding: 0; background: #fbfbfa; }
+	@media (prefers-color-scheme: dark) {
+		html:not([data-theme="light"]), html:not([data-theme="light"]) body { background: #141413; }
+	}
+	html[data-theme="dark"], html[data-theme="dark"] body { background: #141413; }
+</style>
+</head>
+<body>
+<div class="sample-container">
+
+	<header class="sample-header">
+		<h1 class="sample-header__title">Items</h1>
+	</header>
+
+	
+
+		<div class="sample-empty">
+			<p class="sample-empty__title">No Items</p>
+			<p class="sample-empty__hint">Items you create in the control panel will appear here.</p>
+		</div>
+
+	
+
+</div>
+
+</body>
+</html>

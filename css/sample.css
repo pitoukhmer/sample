@@ -1,5 +1,356 @@
+/* ==========================================================================
+   Sample module — public styles
+   Implements DESIGN.md. Every value below is a token defined in §2–§4.
+   No build step, no dependencies, no webfonts.
+   ========================================================================== */
 
-.sample-data table { width: 100%; }
-.sample-data th { font-weight: bold; border-bottom: 1px solid #d8d8d8; }
-.sample-data th,td { padding: 5px; width: 50%; text-align: center; }
-.sample-data td { background-color: #f2f2f2; }
+/* --- Tokens: light (base) ------------------------------------------------ */
+
+.sample-container {
+	--c-bg: #fbfbfa;
+	--c-surface: #ffffff;
+	--c-surface-sunken: #f4f4f2;
+	--c-text: #1a1a18;
+	--c-text-muted: #6b6b66;
+	--c-text-faint: #9a9a94;
+	--c-border: #e4e4e0;
+	--c-border-strong: #c9c9c3;
+	--c-accent: #1f5f4f;
+	--c-accent-hover: #17493c;
+	--c-accent-soft: #e8f0ed;
+	--c-danger: #a3352b;
+	--c-danger-soft: #f8ebe9;
+	--c-focus: #2f6fd0;
+
+	--font-sans: ui-sans-serif, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	--font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+	--t-display: 1.75rem;
+	--t-heading: 1.125rem;
+	--t-body: 0.9375rem;
+	--t-small: 0.8125rem;
+
+	--s-1: 4px;
+	--s-2: 8px;
+	--s-3: 12px;
+	--s-4: 16px;
+	--s-5: 24px;
+	--s-6: 32px;
+	--s-7: 48px;
+	--s-8: 64px;
+
+	--r-sm: 4px;
+	--r-md: 8px;
+	--r-full: 999px;
+
+	--e-1: 0 1px 2px rgb(0 0 0 / 0.04), 0 1px 1px rgb(0 0 0 / 0.03);
+	--e-2: 0 4px 12px rgb(0 0 0 / 0.08), 0 1px 3px rgb(0 0 0 / 0.04);
+
+	--m-fast: 120ms;
+	--m-base: 200ms;
+	--m-ease: cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+/* --- Tokens: dark -------------------------------------------------------- */
+/* Only token values are redefined here — never the rules that consume them. */
+
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme="light"]) .sample-container {
+		--c-bg: #141413;
+		--c-surface: #1c1c1a;
+		--c-surface-sunken: #232321;
+		--c-text: #ecece8;
+		--c-text-muted: #a1a19a;
+		--c-text-faint: #75756e;
+		--c-border: #2e2e2b;
+		--c-border-strong: #43433f;
+		--c-accent: #5cbfa3;
+		--c-accent-hover: #7ad0b7;
+		--c-accent-soft: #1a2f29;
+		--c-danger: #e07b6f;
+		--c-danger-soft: #2f1e1c;
+		--c-focus: #6ba3e8;
+	}
+}
+
+:root[data-theme="dark"] .sample-container {
+	--c-bg: #141413;
+	--c-surface: #1c1c1a;
+	--c-surface-sunken: #232321;
+	--c-text: #ecece8;
+	--c-text-muted: #a1a19a;
+	--c-text-faint: #75756e;
+	--c-border: #2e2e2b;
+	--c-border-strong: #43433f;
+	--c-accent: #5cbfa3;
+	--c-accent-hover: #7ad0b7;
+	--c-accent-soft: #1a2f29;
+	--c-danger: #e07b6f;
+	--c-danger-soft: #2f1e1c;
+	--c-focus: #6ba3e8;
+}
+
+/* --- Container ----------------------------------------------------------- */
+
+.sample-container {
+	max-width: 1120px;
+	margin-inline: auto;
+	padding: var(--s-6) var(--s-4);
+	color: var(--c-text);
+	background-color: var(--c-bg);
+	font-family: var(--font-sans);
+	font-size: var(--t-body);
+	line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+}
+
+.sample-container *,
+.sample-container *::before,
+.sample-container *::after {
+	box-sizing: border-box;
+}
+
+/* Focus is always visible. DESIGN.md §7.2 */
+.sample-container :focus-visible {
+	outline: 2px solid var(--c-focus);
+	outline-offset: 2px;
+	border-radius: var(--r-sm);
+}
+
+/* --- Header -------------------------------------------------------------- */
+
+.sample-header {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: var(--s-3);
+	padding-bottom: var(--s-4);
+	margin-bottom: var(--s-6);
+	border-bottom: 1px solid var(--c-border);
+}
+
+.sample-header__title {
+	margin: 0;
+	font-size: var(--t-display);
+	font-weight: 600;
+	line-height: 1.2;
+	letter-spacing: -0.011em;
+	color: var(--c-text);
+}
+
+/* --- Table --------------------------------------------------------------- */
+
+.sample-data {
+	background-color: var(--c-surface);
+	border: 1px solid var(--c-border);
+	border-radius: var(--r-md);
+	overflow: hidden;
+}
+
+.sample-data__table {
+	width: 100%;
+	border-collapse: collapse;
+	font-variant-numeric: tabular-nums;
+}
+
+/* Visually hidden but available to screen readers. DESIGN.md §7.6 */
+.sample-data__caption {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip-path: inset(50%);
+	white-space: nowrap;
+	border: 0;
+}
+
+.sample-data__th {
+	padding: var(--s-3) var(--s-4);
+	text-align: left;
+	font-size: var(--t-small);
+	font-weight: 500;
+	color: var(--c-text-muted);
+	background-color: var(--c-surface-sunken);
+	border-bottom: 1px solid var(--c-border);
+	white-space: nowrap;
+}
+
+.sample-data__row + .sample-data__row .sample-data__td {
+	border-top: 1px solid var(--c-border);
+}
+
+.sample-data__row {
+	transition: background-color var(--m-fast) var(--m-ease);
+}
+
+.sample-data__row:hover {
+	background-color: var(--c-surface-sunken);
+}
+
+.sample-data__td {
+	padding: var(--s-3) var(--s-4);
+	text-align: left;
+	vertical-align: baseline;
+	color: var(--c-text);
+}
+
+.sample-data__name {
+	font-weight: 500;
+}
+
+/* Slugs are identifiers — mono, per DESIGN.md §3 */
+.sample-data__slug {
+	font-family: var(--font-mono);
+	font-size: var(--t-small);
+	color: var(--c-text-muted);
+	word-break: break-word;
+}
+
+/* Column label, shown only in the stacked mobile layout */
+.sample-data__label {
+	display: none;
+	font-size: var(--t-small);
+	font-weight: 400;
+	color: var(--c-text-muted);
+	margin-bottom: var(--s-1);
+}
+
+/* --- Empty state --------------------------------------------------------- */
+
+.sample-empty {
+	padding: var(--s-7) var(--s-4);
+	text-align: center;
+	background-color: var(--c-surface-sunken);
+	border: 1px solid var(--c-border);
+	border-radius: var(--r-md);
+}
+
+.sample-empty__title {
+	margin: 0 0 var(--s-2);
+	font-size: var(--t-heading);
+	font-weight: 600;
+	color: var(--c-text);
+}
+
+.sample-empty__hint {
+	margin: 0;
+	font-size: var(--t-small);
+	color: var(--c-text-muted);
+}
+
+/* --- Pagination ---------------------------------------------------------- */
+
+.sample-pagination {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: center;
+	gap: var(--s-4);
+	margin-top: var(--s-4);
+	font-size: var(--t-small);
+	color: var(--c-text-muted);
+}
+
+.sample-pagination a,
+.sample-pagination span {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	/* 44px minimum hit area. DESIGN.md §7.3 */
+	min-width: 44px;
+	min-height: 44px;
+	padding: 0 var(--s-2);
+	border-radius: var(--r-sm);
+	text-decoration: none;
+	color: var(--c-text-muted);
+	transition: color var(--m-fast) var(--m-ease),
+	            background-color var(--m-fast) var(--m-ease);
+}
+
+.sample-pagination a:hover {
+	color: var(--c-text);
+	background-color: var(--c-surface-sunken);
+}
+
+/* PyroCMS marks the active page with .current */
+.sample-pagination .current {
+	font-weight: 500;
+	color: var(--c-text);
+	background-color: var(--c-accent-soft);
+}
+
+/* --- Mobile: table reflows to cards, never scrolls sideways --------------- */
+/* DESIGN.md §5 Table + §6 mobile-first                                       */
+
+@media (max-width: 639px) {
+	.sample-container {
+		padding: var(--s-5) var(--s-3);
+	}
+
+	.sample-data {
+		background-color: transparent;
+		border: 0;
+		border-radius: 0;
+		overflow: visible;
+	}
+
+	.sample-data__table,
+	.sample-data__tbody,
+	.sample-data__row,
+	.sample-data__td {
+		display: block;
+		width: 100%;
+	}
+
+	.sample-data__thead {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip-path: inset(50%);
+	}
+
+	.sample-data__row {
+		background-color: var(--c-surface);
+		border: 1px solid var(--c-border);
+		border-radius: var(--r-md);
+		box-shadow: var(--e-1);
+		padding: var(--s-4);
+		margin-bottom: var(--s-3);
+	}
+
+	.sample-data__row + .sample-data__row .sample-data__td {
+		border-top: 0;
+	}
+
+	.sample-data__td {
+		padding: 0;
+	}
+
+	.sample-data__td + .sample-data__td {
+		margin-top: var(--s-3);
+	}
+
+	.sample-data__label {
+		display: block;
+	}
+
+	.sample-pagination {
+		justify-content: center;
+	}
+}
+
+/* --- Reduced motion ------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+	.sample-container *,
+	.sample-container *::before,
+	.sample-container *::after {
+		transition-duration: 0.01ms !important;
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+	}
+}

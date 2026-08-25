@@ -26,3 +26,28 @@ event file and its own plugin.
 To use this module simply clone it using Git or download the zip. Make sure the branch you download from matches the version of PyroCMS you are using. For example, PyroCMS 1.3.2 users will use 1.3/master branch, and PyroCMS 2.0 users will use 2.0/master branch, and so on. Once you have the folder you will need to rename it to "sample". This is very important as
 PyroCMS uses the folder name to determine the class to call when installing or when loading a controller. This may mean that you will need to unzip the
 downloaded version and then rezip it before uploading to your PyroCMS install.
+## Frontend Polish Kit
+
+This repository doubles as a worked example of a repeatable frontend polish
+process. Four pieces:
+
+| File | Purpose |
+|---|---|
+| `DESIGN.md` | The design system as plain text — tokens, components, accessibility gates, anti-goals. Coding agents read this before generating UI. |
+| `preview/render.php` | Renders `views/index.php` against fixture data to static HTML, so the UI can be reviewed without a PyroCMS install. |
+| `preview/verify.mjs` | Loads the rendered pages in headless Chromium and asserts the release gates from `DESIGN.md` §10. Exits non-zero on failure. |
+| `PLAYBOOK.md` | The operator's manual for running this process on other projects. |
+
+### Running the design gate
+
+```bash
+npm install playwright && npx playwright install chromium
+php preview/render.php && node preview/verify.mjs
+```
+
+Screenshots are written to `preview/screenshots/` (gitignored). If Chromium is
+already installed, point at it with `CHROMIUM_PATH=/path/to/chrome` instead of
+downloading a second copy.
+
+The gate covers 2 pages × 2 themes × 3 breakpoints and checks console output,
+horizontal overflow, tap-target size, focus visibility, and text contrast.

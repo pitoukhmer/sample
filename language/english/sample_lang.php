@@ -3,6 +3,7 @@
 $lang['sample:success']			=	'It worked';
 $lang['sample:error']			=	'It didn\'t work';
 $lang['sample:no_items']		=	'No Items';
+$lang['sample:no_items_hint']	=	'Items you create in the control panel will appear here.';
 
 //page titles
 $lang['sample:create']			=	'Create Item';
