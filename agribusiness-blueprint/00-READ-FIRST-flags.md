@@ -1,0 +1,16 @@
+# Read First: What Is Verified, What Is Not
+
+Before you spend a riel, these are the items in Phases 1 and 2 that I could not confirm and that you must check on the ground. Everything else in the blueprint is built so these unknowns cannot sink you.
+
+| # | Item | Status | What to do |
+|---|---|---|---|
+| 1 | All wholesale and retail prices (fertilizer, banana flour, lotus root powder, cashews, durian, oranges) | **Unconfirmed estimates.** Marked "EST" everywhere they appear. | Replace with real quotes from the Day 4 to 14 supplier calls. Re-run the margin column in the Phase 1 table before buying. |
+| 2 | The transcript claim that resellers grew "from $400 to $500 into thousands and tens of thousands" | **Unverifiable earnings claim.** It is the speaker's testimonial, not data. | Do not repeat it in your own ads or farmer pitches. Plan with the conservative numbers in this blueprint. |
+| 3 | Huy Yun (ហុយយុន) dealer/reseller or private-label program terms | **Not confirmed.** The video says they support resellers; I have no published terms, prices, or MOQ. | Use Script C to ask them directly. Treat them as one of at least three suppliers you compare, not the only option. Do not use the Huy Yun name or logo in your ads unless they give written permission as an authorized dealer. |
+| 4 | Selling **pesticides** online | **Licensing risk.** Cambodia's Law on the Management of Pesticides and Fertilizers (2012) requires a business license from MAFF for distributing and retailing agricultural materials, and only MAFF-registered products may be sold. Some active ingredients are banned or restricted. | Day 1 to 45: sell **fertilizers, bio-fertilizers, and foliar nutrients only**. Add pesticides only after you hold the retail/distribution license from the Provincial Department of Agriculture (PDAFF) / MAFF. Until then, refer pesticide inquiries to a licensed partner dealer for a referral fee. |
+| 5 | Government fees and tax thresholds (MoC registration, GDT patent tax, e-commerce permit, MAFF product registration) | **Figures change and I give ranges only.** | Confirm on the official MoC business registration portal and with GDT or a licensed tax agent before filing. |
+| 6 | Durian season timing | **Seasonal fact check.** Today is 14 Nov 2026. Cambodian durian (Kampot, Kep, Mondulkiri, Ratanakiri) generally harvests roughly May to August, with variation by farm and variety. There is no durian to sell in Nov to Apr. | Pillar 3 starts with **in-season fruit** (Battambang oranges, pomelo) now and uses Nov to Apr to sign durian orchards for the 2027 harvest. Confirm the exact harvest window for each orchard in Script B. |
+| 7 | Khmer copy | Written to be natural and spoken-register, but I am not a native speaker. | Have one native Khmer speaker (family member is fine) read every customer-facing script aloud once before you use it. Fix anything that sounds stiff. |
+| 8 | MOU legal enforceability | Template is practical, not legal advice. | Before any farm deposit above $1,000, pay a Cambodian lawyer to review the signed version. |
+
+**Brand naming note:** Phase 3 builds the final brand. Until then, the scripts use the working name **"ស្រុកស្រែ អនឡាញ (Srok Srae Online)"** so you can start calls tomorrow. Swap it in Phase 3. Blanks like `__________` in the MOU are signature/ID fields filled at signing, not missing content.
