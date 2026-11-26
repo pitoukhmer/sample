@@ -1,0 +1,17 @@
+# One file per video idea. The daily job takes the oldest file in topics/
+# that has no matching folder in out/ yet. Only facts written here can be
+# claimed in the video, so copy them from the tool's README.
+tool: AI YouTube Shorts Generator
+url: https://github.com/Anil-matcha/AI-Youtube-Shorts-Generator
+audience: podcasters and streamers who never post clips
+pain: "recorded hours of content, posted zero clips"
+facts:
+  - Open-source alternative to Opus Clip, Vidyo.ai, Klap and SubMagic
+  - Turns long videos into 9:16 shorts
+  - Uses Whisper transcription and LLM highlight detection, then auto vertical cropping
+  - Free, no watermarks, no per-clip credits, MIT license
+  - You need your own AI provider API key
+setup_commands:
+  - git clone https://github.com/Anil-matcha/AI-Youtube-Shorts-Generator
+cta_keyword: CLIPS
+language: en        # en, or km for a Khmer voiceover with English subtitles

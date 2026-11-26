@@ -1,0 +1,109 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&family=JetBrains+Mono:wght@500&display=swap');
+  :root { --bg1:#1b2133; --bg2:#0e1220; --yellow:#ffd23f; --orange:#ff7a2f; --ink:#f4f5f8; --muted:#8a93ab; --green:#3ddc84; --blue:#4c8dff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html,body { width:1080px; height:1920px; overflow:hidden; }
+  body { font-family:'Poppins', 'Noto Sans Khmer', system-ui, sans-serif; color:var(--ink);
+         background: radial-gradient(ellipse at 50% 35%, #2a3350 0%, var(--bg1) 45%, var(--bg2) 100%); }
+  .glow { position:absolute; width:900px; height:900px; left:90px; top:1050px; border-radius:50%;
+          background: radial-gradient(circle, rgba(255,122,47,.18), transparent 65%); }
+  #hook { position:absolute; top:90px; width:100%; text-align:center; font-weight:800; font-size:76px; line-height:1.08;
+          text-shadow: 0 6px 0 rgba(0,0,0,.55); padding:0 50px; }
+  #hook .hl { color:var(--yellow); display:block; }
+  #cardwrap { position:absolute; top:360px; left:70px; right:70px; height:700px; display:flex; align-items:center; justify-content:center; }
+  .card { width:100%; background:#141a2b; border:2px solid #2c3550; border-radius:34px; padding:44px 48px;
+          box-shadow: 0 30px 80px rgba(0,0,0,.45); }
+  .bar { display:flex; gap:12px; align-items:center; margin:-14px 0 28px; color:var(--muted); font:500 26px 'JetBrains Mono',monospace; }
+  .dot { width:20px; height:20px; border-radius:50%; } .r{background:#ff5f57} .y{background:#febc2e} .g{background:#28c840}
+  .repo { font-size:58px; font-weight:800; line-height:1.1; }
+  .desc { margin-top:20px; font-size:34px; color:var(--yellow); font-weight:600; line-height:1.3; }
+  .badges { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+  .badge { border:4px solid var(--green); color:var(--green); border-radius:60px; padding:16px 34px; font-size:42px; font-weight:800; }
+  .badge:nth-child(2n) { border-color:var(--blue); color:var(--blue); }
+  .badge:nth-child(3n) { border-color:var(--yellow); color:var(--yellow); }
+  .btitle { font-size:46px; font-weight:800; margin-bottom:26px; }
+  .item { display:flex; gap:24px; align-items:center; font-size:40px; font-weight:600; color:#5b6480; margin:18px 0; }
+  .item .n { width:58px; height:58px; border-radius:50%; background:#232b42; display:flex; align-items:center; justify-content:center; font-size:30px; flex:none; }
+  .item.on { color:var(--ink); } .item.on .n { background:var(--orange); color:#fff; }
+  .term { font:500 34px/1.55 'JetBrains Mono',monospace; color:#cfe3ff; white-space:pre-wrap; word-break:break-all; }
+  .term .p { color:var(--green); }
+  .big { text-align:center; font-size:230px; font-weight:800; color:var(--yellow); line-height:1; text-shadow:0 10px 0 rgba(0,0,0,.4); }
+  .biglabel { text-align:center; font-size:44px; font-weight:600; margin-top:24px; }
+  .cta { text-align:center; }
+  .cta .kw { display:inline-block; background:var(--orange); color:#fff; font-size:110px; font-weight:800; padding:10px 60px; border-radius:30px; margin:20px 0; }
+  .cta .s { font-size:42px; font-weight:600; color:var(--ink); }
+  #tag { position:absolute; top:1130px; width:100%; text-align:center; }
+  #tag span { display:inline-block; padding:8px 26px; border-radius:30px; font-weight:800; font-size:30px; letter-spacing:2px; }
+  #tag span.you { background:var(--blue); } #tag span.host { background:var(--orange); }
+  #avatar { position:absolute; left:0; right:0; bottom:-30px; height:640px; display:flex; justify-content:center; align-items:flex-end; }
+  body.solo #cardwrap { display:none; }
+  body.solo #avatar { top:330px; bottom:auto; height:780px; align-items:center; }
+  body.solo #avatar svg { width:760px; height:760px; }
+  #avatar svg { width:560px; height:560px; }
+</style></head>
+<body>
+<div class="glow"></div>
+<div id="hook"></div>
+<div id="cardwrap"></div>
+<div id="tag"><span></span></div>
+<div id="avatar"></div>
+<script>
+const HOST_SVG = (mouth) => `
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <line x1="200" y1="40" x2="200" y2="95" stroke="#ff7a2f" stroke-width="12"/>
+  <circle cx="200" cy="34" r="20" fill="#ffe08a"/>
+  <rect x="60" y="90" width="280" height="250" rx="70" fill="#ff7a2f"/>
+  <rect x="60" y="90" width="280" height="120" rx="70" fill="#ff9450" opacity=".55"/>
+  <rect x="28" y="170" width="44" height="100" rx="20" fill="#d95f1c"/>
+  <rect x="328" y="170" width="44" height="100" rx="20" fill="#d95f1c"/>
+  <rect x="100" y="135" width="200" height="165" rx="40" fill="#141018"/>
+  <rect x="148" y="172" width="26" height="40" rx="4" fill="#fff4dc"/>
+  <rect x="226" y="172" width="26" height="40" rx="4" fill="#fff4dc"/>
+  <rect x="118" y="232" width="20" height="10" rx="3" fill="#ffb27f"/>
+  <rect x="262" y="232" width="20" height="10" rx="3" fill="#ffb27f"/>
+  ${mouth ? '<rect x="176" y="240" width="48" height="30" rx="6" fill="#fff4dc"/>'
+          : '<rect x="176" y="252" width="48" height="10" rx="4" fill="#fff4dc"/>'}
+  <rect x="120" y="335" width="60" height="40" rx="16" fill="#b44c17"/>
+  <rect x="220" y="335" width="60" height="40" rx="16" fill="#b44c17"/>
+</svg>`;
+const YOU_SVG = (mouth) => `
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <rect x="70" y="300" width="260" height="140" rx="60" fill="#3a4157"/>
+  <rect x="170" y="300" width="10" height="60" rx="4" fill="#e9ecf3"/><rect x="220" y="300" width="10" height="60" rx="4" fill="#e9ecf3"/>
+  <rect x="95" y="80" width="210" height="230" rx="80" fill="#f2b07a"/>
+  <path d="M85 150 Q90 50 200 45 Q310 50 315 150 L315 120 Q250 95 200 100 Q140 95 85 125 Z" fill="#2b2b33"/>
+  <rect x="80" y="95" width="240" height="55" rx="26" fill="#2b2b33"/>
+  <ellipse cx="160" cy="185" rx="30" ry="34" fill="#fff"/><ellipse cx="240" cy="185" rx="30" ry="34" fill="#fff"/>
+  <circle cx="163" cy="190" r="17" fill="#241c18"/><circle cx="243" cy="190" r="17" fill="#241c18"/>
+  <circle cx="169" cy="183" r="5" fill="#fff"/><circle cx="249" cy="183" r="5" fill="#fff"/>
+  <rect x="190" y="215" width="20" height="18" rx="6" fill="#e0905c"/>
+  ${mouth ? '<path d="M165 250 Q200 300 235 250 Z" fill="#5a1f22"/><rect x="185" y="270" width="30" height="10" rx="4" fill="#e0505a"/>'
+          : '<path d="M170 258 Q200 276 230 258" stroke="#5a1f22" stroke-width="8" fill="none" stroke-linecap="round"/>'}
+</svg>`;
+const esc = s => (s ?? '').replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+function cardHTML(c) {
+  const bar = (t) => `<div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>&nbsp;${esc(t)}</div>`;
+  switch (c.type) {
+    case 'github': return `<div class="card">${bar('github')}<div class="repo">${esc(c.title)}</div><div class="desc">${esc(c.subtitle)}</div></div>`;
+    case 'badges': return `<div class="badges">${c.items.map(i => `<div class="badge">${esc(i)}</div>`).join('')}</div>`;
+    case 'bullets': return `<div class="card"><div class="btitle">${esc(c.title)}</div>${c.items.map((i, k) =>
+        `<div class="item ${k === c.active ? 'on' : ''}"><span class="n">${k + 1}</span>${esc(i)}</div>`).join('')}</div>`;
+    case 'terminal': return `<div class="card">${bar(c.title || 'terminal')}<div class="term">${c.items.map(l =>
+        l.startsWith('#') ? `<span style="color:#6b7490">${esc(l)}</span>` : `<span class="p">$</span> ${esc(l)}`).join('\n')}</div></div>`;
+    case 'number': return `<div><div class="big">${esc(c.value)}</div><div class="biglabel">${esc(c.subtitle)}</div></div>`;
+    case 'cta': return `<div class="card cta"><div class="s">Comment</div><div class="kw">${esc(c.title)}</div><div class="s">${esc(c.subtitle || "and I'll DM you the link")}</div></div>`;
+    default: return '';
+  }
+}
+window.setScene = (s) => {
+  document.getElementById('hook').innerHTML = `${esc(s.hook_title)}<span class="hl">${esc(s.hook_highlight)}</span>`;
+  document.body.classList.toggle('solo', s.card.type === 'none');
+  document.getElementById('cardwrap').innerHTML = cardHTML(s.card);
+  const tag = document.querySelector('#tag span');
+  tag.className = s.speaker; tag.textContent = s.speaker === 'you' ? 'YOU' : s.host_name;
+  document.getElementById('avatar').innerHTML = (s.speaker === 'you' ? YOU_SVG : HOST_SVG)(s.mouth);
+};
+</script>
+</body></html>
