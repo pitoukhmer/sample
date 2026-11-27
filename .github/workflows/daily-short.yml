@@ -1,0 +1,76 @@
+# Writes and renders one short per day, then opens an issue for you to review.
+# You watch the video, tick the checklist, post it, close the issue.
+name: Daily short (shorts-autopilot)
+
+on:
+  schedule:
+    - cron: "17 1 * * *"   # 08:17 Phnom Penh time (UTC+7)
+  workflow_dispatch:
+    inputs:
+      lang:
+        description: "Voiceover language (en or km)"
+        default: "en"
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  make:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: shorts-autopilot
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: |
+          sudo apt-get update -q && sudo apt-get install -y -q ffmpeg espeak-ng fonts-noto-core
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: Write + render next topic
+        id: run
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          HOST_NAME: PITOU
+        run: |
+          python pipeline/run_next.py --lang "${{ github.event.inputs.lang || 'en' }}" | tee run.log
+          echo "dir=$(grep READY_DIR= run.log | cut -d= -f2)" >> "$GITHUB_OUTPUT"
+      - name: Mark topic as done
+        if: steps.run.outputs.dir != ''
+        run: |
+          git config user.name "shorts-autopilot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A topics
+          git commit -m "Mark topic done: $(basename "${{ steps.run.outputs.dir }}")"
+          git push
+      - name: Upload video
+        if: steps.run.outputs.dir != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: short-${{ github.run_number }}
+          path: |
+            ${{ steps.run.outputs.dir }}/video.mp4
+            ${{ steps.run.outputs.dir }}/caption.txt
+            ${{ steps.run.outputs.dir }}/REVIEW.md
+            ${{ steps.run.outputs.dir }}/script.json
+          retention-days: 14
+      - name: Open review issue
+        if: steps.run.outputs.dir != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          D="${{ steps.run.outputs.dir }}"
+          {
+            echo "Download the video: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            echo
+            echo "## Caption"
+            echo '```'
+            cat "$D/caption.txt"
+            echo '```'
+            cat "$D/REVIEW.md"
+          } > body.md
+          gh issue create --title "Review short: $(basename "$D")" --body-file body.md

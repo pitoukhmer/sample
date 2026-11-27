@@ -1,0 +1,33 @@
+{
+  "slug": "podcast-clipper",
+  "hook_title": "2-Hour Podcast,",
+  "hook_highlight": "Zero Clips Posted",
+  "scenes": [
+    {"speaker": "you", "line": "I recorded a two hour podcast last week.", "card": {"type": "none"}},
+    {"speaker": "you", "line": "I've posted zero clips. Cutting them takes forever.", "card": {"type": "number", "value": "0", "subtitle": "clips posted this week"}},
+    {"speaker": "host", "line": "So the podcast is just sitting on your laptop. Cool.", "card": {"type": "none"}},
+    {"speaker": "host", "line": "There's a free tool that cuts the clips for you.", "card": {"type": "github", "title": "Anil-matcha / AI-Youtube-Shorts-Generator", "subtitle": "Open-source alternative to Opus Clip, Vidyo.ai, Klap and SubMagic"}},
+    {"speaker": "host", "line": "Free. Open source. No watermark. No per clip credits.", "card": {"type": "badges", "items": ["Free", "Open source", "MIT license", "No watermark"]}},
+    {"speaker": "you", "line": "Okay. What's the catch?", "card": {"type": "none"}},
+    {"speaker": "host", "line": "You bring your own AI key. That's it. Three steps.", "card": {"type": "bullets", "title": "How it works", "items": ["Clone it, add a key", "Drop in your video", "Get vertical shorts"], "active": -1}},
+    {"speaker": "host", "line": "One. Clone it and add your AI key.", "card": {"type": "terminal", "title": "terminal", "items": ["git clone https://github.com/Anil-matcha/AI-Youtube-Shorts-Generator", "# then add your API key to the .env file"]}},
+    {"speaker": "host", "line": "Two. Give it your long video.", "card": {"type": "bullets", "title": "How it works", "items": ["Clone it, add a key", "Drop in your video", "Get vertical shorts"], "active": 1}},
+    {"speaker": "host", "line": "Three. Whisper transcribes every word.", "card": {"type": "bullets", "title": "How it works", "items": ["Transcribe with Whisper", "AI finds the highlights", "Auto crop to 9:16"], "active": 0}},
+    {"speaker": "host", "line": "An AI picks the highlights.", "card": {"type": "bullets", "title": "How it works", "items": ["Transcribe with Whisper", "AI finds the highlights", "Auto crop to 9:16"], "active": 1}},
+    {"speaker": "host", "line": "And it crops them to vertical. Done.", "card": {"type": "bullets", "title": "How it works", "items": ["Transcribe with Whisper", "AI finds the highlights", "Auto crop to 9:16"], "active": 2}},
+    {"speaker": "you", "line": "Wait. Which moment did it pick first?", "card": {"type": "none"}},
+    {"speaker": "host", "line": "Minute forty. You explaining crypto to your aunt.", "card": {"type": "number", "value": "40:12", "subtitle": "top highlight"}},
+    {"speaker": "you", "line": "That was off the record!", "card": {"type": "none"}},
+    {"speaker": "host", "line": "The microphone disagrees.", "card": {"type": "none"}},
+    {"speaker": "host", "line": "Comment CLIPS and I'll send you the link.", "card": {"type": "cta", "title": "CLIPS", "subtitle": "and I'll DM you the link"}}
+  ],
+  "cta_keyword": "CLIPS",
+  "post_caption": "2-hour podcast. Zero clips posted.\nThis free, open-source tool transcribes it, picks the highlights and crops them to vertical. No watermark, no credits. You bring your own AI key.\nComment CLIPS and I'll send you the link.",
+  "hashtags": ["aitools", "contentcreator", "podcast", "opensource", "shorts", "productivity"],
+  "sources": ["https://github.com/Anil-matcha/AI-Youtube-Shorts-Generator"],
+  "claims_to_verify": [
+    "Repo README still says free, MIT, no watermark, no per-clip credits",
+    "Which AI keys it currently accepts (OpenAI / Gemini) and the exact .env variable name",
+    "The '40:12 crypto aunt' clip is a joke scenario, not a real result: keep it obviously fictional"
+  ]
+}
