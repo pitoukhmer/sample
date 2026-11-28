@@ -47,9 +47,14 @@ SPACE: one ground floor room 7.7 m x 12.5 m (about 96 m2), close to the local ma
   This is a real walk-in shop, not a small pickup corner.
 PEOPLE: founder's wife full time. One in-store assistant to be hired soon. Founder
   supports part time with AI tools, content and systems.
-WHOLESALER TERMS: 15 days credit, or 50 percent deposit on the order. TO CONFIRM
-  whether these are two options or one combined rule, the credit limit, and whether
-  unsold stock can be swapped.
+WHOLESALER TERMS: two options per order: (a) 15 days credit, or (b) 50 percent
+  deposit. No credit limit set by the wholesaler. Unsold stock cannot be returned.
+  Faulty stock is swapped: 7 days as standard, 1 to 2 months on some items (get the
+  list by brand in writing). Wholesaler is in Phnom Penh, 30 km away, and delivers to
+  the shop in Kandal. Delivery fee, minimum order and lead time: TO CONFIRM.
+PREMISES: owned by the family, no rent. Power cuts are rare (about once a month or
+  less), so backup power is not a planning issue.
+STAFF COST: one assistant at USD 150 to 180 per month.
 WHOLESALE PRICE LIST: not yet obtained.
 VISITORS: walk-in welcome. Distant and provincial buyers served by video call, test
   video and courier.
@@ -81,7 +86,56 @@ Suggested line under the name: "សាកល្បងមុនដឹក ធា�
 3. Credit of 15 days with a stock cap of $10,000 means stock should turn in about two weeks. Suggested opening order $4,000 to $5,000 across 20 to 25 fast items, with the rest held as reserve for reorders and bulky items bought to order. This split is a starting assumption, not a tested figure.
 4. Restocking trips to Phnom Penh become a cost line: transport per trip, frequency, or wholesaler delivery to Kandal.
 5. Rural demand tilts the range: rice cookers, fans, kettles, gas stoves, LED and rechargeable lights, folding beds, scales and ice crushers for market vendors, lunch boxes and bottles for school season. Check power cut frequency and flood season locally.
-6. Payroll now exists. One assistant's wage must be in the break even calculation. Local wage level: TO CONFIRM.
+6. Fixed costs are low: no rent, one assistant at $150 to $180 a month, plus
+   electricity, internet, packaging and ads. Break even sales per month = total fixed
+   costs divided by gross margin percent. Gross margin is unknown until the wholesale
+   price list arrives.
+
+### 2d. Restocking system (founder asked for input)
+
+The facts that shape it: unsold stock cannot go back, faulty stock can, credit runs 15
+days, the wholesaler delivers, and the stock cap is $10,000. So the danger is not
+running out, it is buying things that sit. The system below is a starting design; the
+numbers marked ASSUMPTION should be replaced after four weeks of real sales.
+
+1. One fixed order day a week. Count stock on the evening before, send the order by
+   Telegram in the morning, receive by wholesaler delivery. A second small top-up
+   order is allowed only for items that sold out. Ask the wholesaler for delivery fee,
+   minimum order and cut-off time, then pick the day that lands stock before the
+   busiest market day.
+2. Three classes of product.
+   A, fast sellers (about 20 to 25 items): hold up to two weeks of sales, reorder
+   weekly.
+   B, slower items: one display unit plus one in the box. Reorder only when one sells.
+   C, bulky or expensive items (folding beds, large fryers, food machines): display
+   unit only, or photo and video only. Buy to order with a customer deposit and
+   deliver on the next weekly run.
+3. Reorder rule per item: reorder point = units sold in one week + 1. Order up to =
+   units sold in two weeks. For a new item with no history, first lot is 2 to 3
+   units. [ASSUMPTION]
+4. Opening order in two halves. Buy about half the planned opening stock first, sell
+   for two weeks, then spend the second half only on what actually moved.
+5. Own credit ceiling. The wholesaler sets no limit, so set one: amount owed never
+   above about two weeks of sales, and never above $3,000 in the first three months
+   [ASSUMPTION]. Pay every invoice on day 14 from sales money, not from savings. If an
+   invoice cannot be paid from sales, stop ordering new items until it can.
+6. 30 day rule. Any item with no sale in 30 days gets a price cut or goes into a
+   bundle, and is not reordered. Any item sold out twice in a month moves to class A.
+7. Pre-order for online buyers. List the wholesaler's wider range by photo and video
+   without holding it. Take a deposit by KHQR, add the item to the next weekly order,
+   test it in the shop, then courier it. Promise delivery in days, not hours.
+8. Ask the wholesaler one more thing: will they hand parcels to a courier in Phnom
+   Penh for buyers who live there or in provinces on the other side of the city?
+   That saves the 30 km trip out and back. If yes, agree who tests the item first.
+9. Incoming check. Plug in and test every electrical unit on the day it arrives, film
+   10 seconds of it working, and report faults at once so the swap falls inside the
+   7 day window. Keep a simple faulty log by brand; drop brands that fail often.
+10. Customer warranty must not exceed supplier cover. Offer a 7 day swap on
+    everything. Offer longer only on the items where the wholesaler confirms 1 to 2
+    months in writing.
+11. Weekly numbers: sales by item, stock value on hand (must stay under $10,000),
+    amount owed to the wholesaler, days of stock per class A item, stock-outs, faulty
+    units, items past 30 days without a sale.
 
 ## 3. The master mega prompt (same for all four tools)
 
