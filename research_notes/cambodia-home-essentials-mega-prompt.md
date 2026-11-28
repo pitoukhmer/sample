@@ -1,6 +1,6 @@
 # Cambodia Home Essentials: Research Brief and Mega Prompts
 
-Prepared 28 Nov 2026. Use: fill in Section 2 once, then paste Section 3 plus one wrapper from Section 4 into each AI tool. Section 5 tells you how to merge the four answers.
+Prepared 28 Nov 2026. Use: check Section 2, then paste Section 3 plus one wrapper from Section 4 into each AI tool. Section 5 tells you how to merge the four answers.
 
 ## 1. What the research found (and how sure we are)
 
@@ -35,20 +35,53 @@ One retail price point seen on Khmer24: Sokany 5L air fryer, new, $45. No wholes
 4. Warranty. A reseller who promises warranty carries it. Get the wholesaler's swap terms in writing first.
 5. Commodity pricing. Everyone can buy the same Sokany box. Price alone will not keep you ahead; trust, speed and after sales will.
 
-## 2. Fill this in before pasting (the AI will ask if blank)
+## 2. Founder inputs (updated 28 Nov 2026, paste into the master prompt)
 
 ```
-STARTING CAPITAL (USD):
-HOME LOCATION (district, city) AND SPACE FOR STOCK/SHOWROOM (m2):
-WHO WORKS ON THIS AND HOURS PER WEEK:
-WHOLESALER TERMS: cash only / credit days / consignment / will they dropship or hold stock for me?
-WHOLESALE PRICE LIST: (paste or attach, even partial)
-EXISTING ASSETS: Facebook pages, TikTok accounts, followers, delivery contacts, vehicles
-TARGET MONTHLY NET INCOME AND BY WHEN:
-BRAND NAME IDEAS (if any):
-LANGUAGES I CAN SELL IN: Khmer / English / Chinese
-THINGS I WILL NOT SELL OR DO:
+STOCK BUDGET: under USD 10,000 in total stock at any time. Founder wants low inventory.
+LOCATION: Phum Knong, Prek Ta Meak commune, Khsach Kandal district, Kandal province.
+  A rural commune on the Mekong side of Kandal, population about 12,400 in the 2019
+  census [SOURCE: citypopulation.de]. Not Phnom Penh. Distance and travel time to the
+  Phnom Penh wholesaler: TO CONFIRM.
+SPACE: one ground floor room 7.7 m x 12.5 m (about 96 m2), close to the local market.
+  This is a real walk-in shop, not a small pickup corner.
+PEOPLE: founder's wife full time. One in-store assistant to be hired soon. Founder
+  supports part time with AI tools, content and systems.
+WHOLESALER TERMS: 15 days credit, or 50 percent deposit on the order. TO CONFIRM
+  whether these are two options or one combined rule, the credit limit, and whether
+  unsold stock can be swapped.
+WHOLESALE PRICE LIST: not yet obtained.
+VISITORS: walk-in welcome. Distant and provincial buyers served by video call, test
+  video and courier.
+SECOND LINE IN THE SHOP: a Pitou Foods corner with its own banner and a small stock,
+  sold by the same staff. Pitou Foods is a separate brand. Never state or imply Halal
+  certification for it. Food must be shelved apart from gas stoves and chemicals.
+STORE NAME: new standalone brand, not under the founder's name. Shortlist in Section 2b.
+EXISTING ASSETS, INCOME TARGET, LANGUAGES: not yet given.
 ```
+
+### 2b. Store name shortlist
+
+None of these has been checked against the Ministry of Commerce trademark register or Facebook and TikTok handles. Check before printing a sign.
+
+| Name | Khmer | Meaning | Note |
+|---|---|---|---|
+| Phteah Yeung Home | ផ្ទះយើង | Our home | Recommended. Warm, easy to say, works for appliances and household goods, not tied to one village so it can sell nationwide. |
+| Kruosar Mart | គ្រួសារ ម៉ាត | Family mart | Clear, but "mart" suggests groceries. |
+| Phteah Laor | ផ្ទះល្អ | Good home | Short, positive, slightly generic. |
+| Prek Home | ព្រែក ហូម | From Prek Ta Meak | Strong locally, weaker for online buyers elsewhere. |
+| Chamnay Phteah | ចំណាយផ្ទះ | Household spending | Signals value, less brandable. |
+
+Suggested line under the name: "សាកល្បងមុនដឹក ធានាប្តូរ ៧ថ្ងៃ" (tested before delivery, 7 day swap), only once the wholesaler confirms swap terms in writing.
+
+### 2c. What these answers change
+
+1. This is now a local shop first and an online shop second. A 96 m2 room beside a commune market can serve walk-in buyers in Prek Ta Meak and nearby communes who cannot easily compare prices in Phnom Penh, while Facebook, TikTok and Telegram reach the rest of the country. The plan must size both.
+2. Phnom Penh same day delivery is no longer the main promise. The local promise is "see it, test it, take it home today". The online promise is a test video plus courier.
+3. Credit of 15 days with a stock cap of $10,000 means stock should turn in about two weeks. Suggested opening order $4,000 to $5,000 across 20 to 25 fast items, with the rest held as reserve for reorders and bulky items bought to order. This split is a starting assumption, not a tested figure.
+4. Restocking trips to Phnom Penh become a cost line: transport per trip, frequency, or wholesaler delivery to Kandal.
+5. Rural demand tilts the range: rice cookers, fans, kettles, gas stoves, LED and rechargeable lights, folding beds, scales and ice crushers for market vendors, lunch boxes and bottles for school season. Check power cut frequency and flood season locally.
+6. Payroll now exists. One assistant's wage must be in the break even calculation. Local wage level: TO CONFIRM.
 
 ## 3. The master mega prompt (same for all four tools)
 
@@ -59,10 +92,18 @@ shops in Cambodia. You write for a solo founder who moves fast and will execute 
 personally. Be practical, numerical and honest. No motivational language.
 
 MISSION
-Write a business plan and an operating playbook for a home-based online store in
-Cambodia selling small home appliances and daily or urgent household necessities, with
-a small physical showroom or pickup corner at home for buyers who want to see or test
-before paying. The goal is a business that is ahead of other small sellers in this
+Write a business plan and an operating playbook for a hybrid store in Cambodia selling
+small home appliances and daily or urgent household necessities. It has two engines:
+a 96 m2 walk-in shop beside the commune market in Prek Ta Meak, Khsach Kandal, Kandal
+province, and nationwide online selling run from the same shop. Size the local
+catchment (commune and neighbouring communes, market day traffic, vendors, schools,
+factories nearby) separately from online demand, and say which engine should carry the
+fixed costs in the first six months. Total stock must stay under USD 10,000 with
+supplier credit of 15 days, so design for a stock turn of about two weeks and a
+buy-to-order rule for slow or bulky items. Include a floor plan for the 7.7 m x 12.5 m
+room (display, testing bench, packing and live selling area, stock, cashier) and a
+separate Pitou Foods corner under its own banner. Never state or imply Halal
+certification for Pitou Foods. The goal is a business that is ahead of other small sellers in this
 sector within 12 months, measured by repeat purchase rate, delivery speed, return rate
 and net profit, not follower counts.
 
@@ -135,9 +176,11 @@ E. Sourcing plan: stage 1 buying from Phnom Penh wholesalers in small lots or
    exclusivity; stage 3 direct import from China, Thailand or Vietnam with landed cost
    method and import duties to verify. Include a supplier question list and a quality
    check routine for each incoming carton.
-F. Home operation design: stock layout for a small room, a 4 to 10 m2 showroom or
-   pickup corner, testing bench for electrical items, opening hours by appointment,
-   safety and security for receiving strangers at home, signage, Google Maps listing.
+F. Shop design: floor plan for the 96 m2 room, shelving and fit-out budget, testing
+   bench for electrical items, opening hours matched to market hours, cash handling
+   and security, signage, Google Maps listing, staff roles for one full time owner
+   and one assistant, restocking trips from Phnom Penh, and how the Pitou Foods
+   corner shares staff without mixing stock, cash records or brand claims.
 G. Sales channels: role of each of Facebook page, Facebook live, TikTok and TikTok
    Shop, Telegram channel and bot, Khmer24, Google Maps and a simple website or
    catalogue. Say which to start with and which to delay, with reasons.
@@ -159,7 +202,7 @@ J. The ahead-of-everyone playbook: at least 12 specific advantages a small selle
 K. Legal and compliance checklist: business and tax registration path for a solo
    seller, e-commerce permit position, product safety, consumer protection, trademark
    for the shop name, record keeping. Each item with the office to confirm with.
-L. Financial plan: startup budget at three capital levels ($500, $2,000, $5,000 or the
+L. Financial plan: startup budget with stock capped at $10,000 (fit-out, opening stock, reserve; or the
    founder's figure), monthly fixed costs, 12 month low, base and high scenarios,
    cash flow with COD delay, break even order count, stock turnover target.
 M. 90 day action plan by week, with a test budget, kill criteria for products that do
