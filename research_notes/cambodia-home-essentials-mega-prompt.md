@@ -41,8 +41,8 @@ One retail price point seen on Khmer24: Sokany 5L air fryer, new, $45. No wholes
 STOCK BUDGET: under USD 10,000 in total stock at any time. Founder wants low inventory.
 LOCATION: Phum Knong, Prek Ta Meak commune, Khsach Kandal district, Kandal province.
   A rural commune on the Mekong side of Kandal, population about 12,400 in the 2019
-  census [SOURCE: citypopulation.de]. Not Phnom Penh. Distance and travel time to the
-  Phnom Penh wholesaler: TO CONFIRM.
+  census [SOURCE: citypopulation.de]. Not Phnom Penh; about 30 km from the Phnom Penh
+  wholesaler [FOUNDER DATA].
 SPACE: one ground floor room 7.7 m x 12.5 m (about 96 m2), close to the local market.
   This is a real walk-in shop, not a small pickup corner.
 PEOPLE: founder's wife full time. One in-store assistant to be hired soon. Founder
@@ -142,7 +142,7 @@ numbers marked ASSUMPTION should be replaced after four weeks of real sales.
 ```
 ROLE
 You are a retail and social commerce operator who has built and run home-based online
-shops in Cambodia. You write for a solo founder who moves fast and will execute this
+shops and small-town retail stores in Cambodia. You write for a solo founder who moves fast and will execute this
 personally. Be practical, numerical and honest. No motivational language.
 
 MISSION
@@ -157,8 +157,7 @@ supplier credit of 15 days, so design for a stock turn of about two weeks and a
 buy-to-order rule for slow or bulky items. Include a floor plan for the 7.7 m x 12.5 m
 room (display, testing bench, packing and live selling area, stock, cashier) and a
 separate Pitou Foods corner under its own banner. Never state or imply Halal
-certification for Pitou Foods. The goal is a business that is ahead of other small sellers in this
-sector within 12 months, measured by repeat purchase rate, delivery speed, return rate
+certification for Pitou Foods. The goal is a business that is ahead of other small sellers in this sector within 12 months, measured by repeat purchase rate, delivery speed, return rate
 and net profit, not follower counts.
 
 SCOPE
@@ -242,8 +241,8 @@ H. Content system: 30 day calendar, 10 short video scripts that demonstrate prod
    real Cambodian homes, a live selling run sheet, product photo standard, and a
    message reply script covering price, delivery, warranty, bargaining and COD
    refusal.
-I. Fulfilment and after sales: courier choice by zone, same day Phnom Penh cut-off
-   time, packing standard for fragile items, test video before dispatch, COD
+I. Fulfilment and after sales: courier choice by zone from a shop 30 km outside
+   Phnom Penh, local same day delivery radius, dispatch cut-off time, packing standard for fragile items, test video before dispatch, COD
    reconciliation, returns, a written warranty policy the business can afford.
 J. The ahead-of-everyone playbook: at least 12 specific advantages a small seller can
    build that typical Cambodian page sellers lack, for example tested before
@@ -262,7 +261,7 @@ L. Financial plan: startup budget with stock capped at $10,000 (fit-out, opening
 M. 90 day action plan by week, with a test budget, kill criteria for products that do
    not sell, and the 8 numbers to track every week.
 N. Risk register: counterfeit and unsafe goods, price wars, COD refusals, supplier
-   stockouts, courier loss, page bans, home security, currency and seasonal swings.
+   stockouts, courier loss, page bans, shop security, unsold stock that cannot be returned, currency and seasonal swings.
    Each with an early warning sign and a response.
 O. Open questions for the founder and a list of every [ASSUMPTION] in one table so
    they can be verified one by one.

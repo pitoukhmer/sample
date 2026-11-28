@@ -1,0 +1,6 @@
+Act as a sceptical investor and a Cambodian retail veteran. Attack this plan. List the
+10 weakest assumptions, any number without a source, any claim that could mislead a
+customer, and the cheapest test that would prove or kill each assumption within two
+weeks. Do not rewrite the plan. Only find what is wrong with it.
+
+[PASTE home-store/plan/business-plan.md BELOW THIS LINE]
