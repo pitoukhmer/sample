@@ -1,17 +1,17 @@
-# Phteah Yeung Home (working name): Business Plan v1
+# Phteah Yeung Home (working name): Business Plan v1.1
 
-Version 1, 28 Nov 2026. Built from the founder's photos, videos and answers plus public sources. It has not yet been merged with the ChatGPT, Kimi and Gemini research (see `../README.md`). Tags used: [FOUNDER DATA], [SOURCE], [ASSUMPTION]. Every assumption is listed in `assumptions.md` with a way to check it.
+Version 1.1, 28 Nov 2026. Built from the founder's photos, videos and answers plus public sources, and merged with three research runs saved in `../inputs/` (see section P). The ChatGPT, Kimi and Gemini answers are not yet merged. Tags used: [FOUNDER DATA], [SOURCE], [ASSUMPTION]. Every assumption is listed in `assumptions.md` with a way to check it.
 
 ## A. Verdict
 
 Worth starting, small, as a test with a hard review at day 60. The setup is unusually low risk: no rent, supplier credit of 15 days, supplier delivery to the door, and a full time owner-operator [FOUNDER DATA]. The weak point is margin. Everyone can buy the same boxes, so the gross margin may be thin, and the model shows that thin margin leaves little after one wage.
 
-What the model says with placeholder inputs (all [ASSUMPTION], see `financial-model.xlsx`): at an 18 percent gross margin and about $385 of monthly fixed costs, the shop must sell about $2,100 a month, roughly $76 per open day, before it earns anything. Below that it loses money. This is a break-even calculation and not an income forecast.
+What the model says with placeholder inputs (all [ASSUMPTION], see `financial-model.xlsx`): at an 18 percent gross margin and about $395 of monthly fixed costs, the shop must sell about $2,200 a month, roughly $78 per open day, before it earns anything. Below that it loses money. This is a break-even calculation and not an income forecast.
 
 Three ways this fails:
 1. Margin is lower than hoped because Phnom Penh sellers and other local shops price the same brands near wholesale.
 2. Stock that does not sell. The wholesaler does not take unsold goods back [FOUNDER DATA].
-3. The commune is small, about 12,400 people in 2019 [SOURCE: citypopulation.de], so walk-in demand has a ceiling and online must add to it.
+3. The commune is small, about 12,400 people in 2019, inside a district of about 141,000 [SOURCE: citypopulation.de]. Walk-in demand has a ceiling unless the shop pulls buyers from neighbouring communes and road traffic at the bridge, so online must add to it.
 
 Best starting wedge: be the place near the market where a family or a vendor can see an item working, buy it today, and bring it back within 7 days if it is faulty. Start with daily and urgent items, add demonstration items through live video.
 
@@ -92,7 +92,7 @@ Security: cash banked or moved daily, a camera over the counter and door, serial
 3. Short product videos posted to Facebook and TikTok from the same recordings.
 4. Facebook live from the test bench twice a week once there are at least 15 products to show.
 5. Khmer24 listings for the higher priced items.
-6. Delay: TikTok Shop, a website, paid ads beyond a small test. Add them when orders show which products travel.
+6. Delay: TikTok Shop (no confirmation was found that it operates in Cambodia; check TikTok Seller Center), a website, paid ads beyond a small test. Add them when orders show which products travel.
 
 ## H. Content system
 
@@ -151,9 +151,10 @@ All figures are in `financial-model.xlsx`. Change the yellow cells on the Inputs
 | Online orders per day | 1 | 3 | 6 |
 | Gross margin | 12% | 18% | 25% |
 | Monthly sales the inputs imply | $1,058 | $3,612 | $8,274 |
-| Monthly fixed costs | $360 | $385 | $430 |
-| Break-even sales per month | $3,000 | $2,139 | $1,720 |
-| Net before owner pay and tax | -$273 | $167 | $1,448 |
+| Monthly fixed costs | $370 | $395 | $440 |
+| Break-even sales per month | $3,083 | $2,194 | $1,760 |
+| Net before owner pay and tax | -$283 | $157 | $1,438 |
+| Annual sales implied | $12,700 | $43,300 | $99,300 |
 | Stock needed at cost | $699 | $1,481 | $3,103 |
 
 Read this as sensitivity, not prediction. The spread between low and high comes almost entirely from margin and order count, which are unknown today. Net is before any pay for the owner. The first two weeks of real sales and the wholesale price list will replace most of these inputs.
@@ -189,6 +190,38 @@ Eight weekly numbers: sales walk-in and online, gross margin, stock value at cos
 | Mixing Pitou Foods and appliance money | Cash does not reconcile | Separate columns and stock counts from day one |
 | Owner overload | Messages unanswered for hours | Saved replies, assistant on the floor, fixed live schedule |
 | Seasonal dips | Rainy season footfall | Shift to mosquito, lighting, indoor items and online |
+
+## P. Research merge, 28 Nov 2026
+
+Three research runs were done with web search. None could open live pages, so every item below comes from search extracts and must be re-checked at the source or by phone. Full detail and links are in `../inputs/`.
+
+What changed in this plan because of them:
+
+1. Retail price references now exist for 19 of the 42 products (column `cambodia_retail_reference_UNVERIFIED` in `product-scoring.csv`). Examples: rice cooker 1.8L $18 to $48 by brand, Sokany kettle $15 to $18, Sokany 5L air fryer $40, table fan $10, Sokany blender $20 to $35, hair clipper $15 to $29. These are Phnom Penh online prices of unknown age. They set the ceiling for the shop's prices; margin is still unknown until the wholesale list arrives.
+2. Three price bands are visible in the sample: unbranded entry, regional mid brands (Sokany, International DR, Toyama), and Japanese or European names. Stocking one entry and one mid option per core item is a reasonable test.
+3. Every listing seen was priced in dollars only, most stated no warranty, and many hid the price. Clear riel and dollar prices and a written swap card are real differences, not decoration.
+4. Sokany is a registered brand owned by a Yiwu company; VGR is reported as a Ningbo company. Nothing was found on SGP, DR International, KEA, Flame or Green Star. Ask the wholesaler for the importer name and look at the rating plate.
+5. An EU safety alert exists for one Sokany travel iron (electric shock). Leads and chargers are the common failure point. The arrival test stays mandatory.
+6. Import duty on electric rice cookers and kettles was reportedly cut to 0 percent from 1 April 2026. Use this when negotiating wholesale prices on those two items. Not confirmed at source.
+7. Employer social security applies from the first employee, about $8 to $10 a month at the planned wage. Added to the model. Garment minimum wage is $210, so $150 to $180 may not hold a good assistant.
+8. Tax line: the base scenario implies about $43,000 a year in sales, under the reported $62,500 small taxpayer line; the high scenario is over it, which brings patent tax, returns and 10 percent VAT. Price with that in mind once sales approach the line.
+9. Consumer rules reportedly require Khmer labelling, a written warranty stating period and conditions, and disclosure when an item is sold without warranty; misleading claims are unlawful even when unintended. The warranty card and the "never claim origin" rule already fit this. Have the card checked.
+10. Price computing scales reportedly need National Metrology Center verification. Ask the wholesaler for proof before stocking them. This item scored high, so resolve it early.
+11. No current courier rate card was found. J&T advertises from KHR 5,000 with free pickup; VET states COD cash back within 2 days. Get rate cards in week 2 as planned.
+12. Local anchors: the shop is where National Road 8 meets the Prek Tamak bridge; a garment factory zone and a vehicle assembly plant (ground broken July 2026) are in the district. Worker numbers were not found. Garment wages are reportedly paid twice a month, in the second and fourth weeks, which suggests timing offers to those weeks.
+13. Direct import is not costable yet: freight quotes conflict (sea from $25 to $120 per cubic metre) and duty rates for blenders, air fryers, clippers and fans were not found. Private label typically needs 500 to 1,000 units per model. Both stay in stage 3.
+
+Contradictions and unresolved points:
+
+| Point | Version A | Version B | How to settle |
+|---|---|---|---|
+| Distance to Phnom Penh | 30 km [FOUNDER DATA] | About 40 km to the bridge (public sources) | Wholesaler's delivery quote |
+| Below the small taxpayer line | No tax or patent tax (government statements in news) | Registration still expected (older firm notes) | Kandal tax branch |
+| E-commerce permit fee and term | KHR 400,000, 2 years | 3 years in another note | Ministry of Commerce |
+| Pchum Ben 2027 dates | 29 Sep to 1 Oct | "October" | Official holiday sub-decree |
+| "DR International" | Same as "International DR" on Khmer24 | Different brand | Box and importer label |
+
+Still not found anywhere: any Phnom Penh wholesale price, how leading Facebook pages run live sales, local market footfall, COD refusal rates, and proof of authorised supply for any brand.
 
 ## O. Open questions
 

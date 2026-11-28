@@ -17,7 +17,7 @@ Every number here was chosen by the planner without evidence. Replace each one, 
 | 11 | Ad spend | $60 to $150 a month | Owner decision after organic test | Month 2 |
 | 12 | Utilities and internet | $50 a month | Bills | Week 1 |
 | 13 | Restock delivery fee and trips | $10, 5 to 6 a month | Ask the wholesaler | Week 1 |
-| 14 | Other monthly costs | $20 | Accountant | Month 1 |
+| 14 | Other monthly costs incl. employer NSSF about $10 | $30 | NSSF office, accountant | Month 1 |
 | 15 | Days of stock held | 14 to 21 | Stock count divided by daily cost of sales | Month 1 |
 | 16 | Fit-out cost | $800 to $1,200 | Two local quotes | Week 2 |
 | 17 | Opening stock | $4,000 to $5,000 in two halves | UnitEconomics sheet and launch list | Week 2 |
